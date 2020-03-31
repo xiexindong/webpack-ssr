@@ -1,0 +1,40 @@
+{
+  "name": "webpack-react",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build:server": "webpack --config build/webpack.config.server.js",
+    "build:client": "webpack --config build/webpack.config.client.js",
+    "dev:client": "cross-env NODE_ENV=development webpack-dev-server  --config build/webpack.config.client.js",
+    "dev:server": "cross-env NODE_ENV=development node server/server.js",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/runtime": "^7.8.7",
+    "@babel/runtime-corejs2": "^7.8.7",
+    "express": "^4.17.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "memory-fs": "^0.5.0",
+    "react-hot-loader": "^4.12.19",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
